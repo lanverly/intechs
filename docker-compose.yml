@@ -2,7 +2,7 @@ services:
   web:
     image: nginx:latest
     container_name: intechs
-    ports:
-      - "50006:80"
+    #ports:
+    #  - "50006:80"
     volumes:
       - ./public:/usr/share/nginx/html:ro
