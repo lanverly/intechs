@@ -1,8 +1,9 @@
 services:
-  web:
-    image: nginx:latest
+  website:
+    build:
+      context: . 
+      dockerfile: ./Dockerfile
+    image: website:dev
     container_name: intechs
-    #ports:
-    #  - "50006:80"
-    volumes:
-      - ./public:/usr/share/nginx/html:ro
+    ports:
+      - "50006:80"
